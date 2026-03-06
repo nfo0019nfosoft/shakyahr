@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leave Management &#8211; shakyaHR</title>
+<link rel="stylesheet" href="css/leave.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+
+
+<body>
+
+  <div class="page-loader">
+
+<div class="loader-logo">
+<img src="images/logo.png">
+</div>
+
+<div class="loader-bars">
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+</div>
+
+<script>
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+const loader=document.querySelector(".page-loader");
+
+loader.style.opacity="0";
+
+setTimeout(()=>{
+loader.style.display="none";
+},500);
+
+},2200);
+
+});
+
+</script>
+
+
+<nav class="navbar">
+
+<div class="nav-container">
+
+<div class="logo">
+<a href="index.html">
+<img src="images/logo.png" alt="logo">
+</a>
+</div>
+
+<div class="menu-toggle">☰</div>
+
+<ul class="nav-links">
+
+<li><a  href="index.html">Home</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+<li class="services">
+
+<a href="#">Services ▾</a>
+
+<ul class="dropdown">
+
+<li><a href="payroll.html">Payroll Process<br>and Compliances</a></li>
+
+<li><a href="leave.html">Leave Management</a></li>
+
+<li><a href="flexi.html">Flexi Staffing – Skilled<br>Employees</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="client.html">Clients</a></li>
+
+<li><a href="contact.html">Contact Us</a></li>
+
+</ul>
+
+<div class="login">
+<a href="#">Login</a>
+</div>
+
+</div>
+
+</nav>
+
+<script>
+
+document.querySelector(".menu-toggle").onclick=function(){
+document.querySelector(".nav-links").classList.toggle("active")
+}
+
+</script>
+
+<script>
+
+const links = document.querySelectorAll(".nav-links a");
+
+const currentPage = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+
+const linkPage = link.getAttribute("href");
+
+if(linkPage === currentPage){
+link.classList.add("active");
+}
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+<section class="hero">
+  <img src="images/banner.png" alt="Hero Image">
+</section>
+
+
+
+
+
+
+<section class="leave-section">
+  <div class="leave-container">
+
+    <div class="leave-img animate-left">
+      <img src="images/leave.png" alt="Leave Management">
+    </div>
+
+    <div class="leave-text animate-right">
+      <h2>LEAVE MANAGEMENT</h2>
+
+      <p>
+        Based On the leave data furnished periodically by the client
+        we provide –
+      </p>
+
+      <ol>
+        <li>Employee wise /type wise leave balances on agreed time schedule.</li>
+        <li>Leave encashment computation as per clients’ policy</li>
+        <li>Any other reports required by the clients’</li>
+      </ol>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+    const observer = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".animate-left, .animate-right")
+.forEach((el)=>observer.observe(el));
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- RESOURCES -->
+
+<div class="footer-col">
+
+<h3>RESOURCES</h3>
+
+<ul>
+
+<li>
+<i class="fa-solid fa-caret-right"></i>
+<a href="payroll.html">Payroll Process and <br>Compliances</a>
+</li>
+
+<li>
+<i class="fa-solid fa-caret-right"></i>
+<a href="flexi.html">Flexi Staffing – skilled <br>employees</a>
+</li>
+
+<li>
+<i class="fa-solid fa-caret-right"></i>
+<a href="leave.html">Leave Management</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- QUICK LINKS -->
+
+<div class="footer-col">
+
+<h3>QUICK LINKS</h3>
+
+<ul>
+
+<li>
+<i class="fa-solid fa-caret-right"></i>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<i class="fa-solid fa-caret-right"></i>
+<a href="about.html">About Us</a>
+</li>
+
+<li>
+<i class="fa-solid fa-caret-right"></i>
+<a href="contact.html">Contact us</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="footer-col contact">
+
+<h3>CONTACT US</h3>
+
+<div class="contact-row">
+<i class="fa-solid fa-phone"></i>
+
+<div>
+<p>+91 9573089746</p>
+<p>+91 8309880312</p>
+</div>
+
+</div>
+
+<div class="contact-row">
+<i class="fa-solid fa-phone-volume"></i>
+<p>040-46023289</p>
+</div>
+
+<div class="contact-row">
+<i class="fa-solid fa-envelope"></i>
+
+<div>
+<p>info@Shakyahr.com</p>
+<p>shakyahrsolutions@gmail.com</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SOCIAL -->
+
+<div class="footer-col social">
+
+<h3>SOCIAL MEDIA</h3>
+
+<a href="https://www.linkedin.com/company/shakya-hr-solutions-private-limited/" 
+class="linkedin" 
+target="_blank">
+
+<span class="icon-bg">
+<i class="fa-brands fa-linkedin-in"></i>
+</span>
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+© 2024 All Copyrights Reserved ShakyaHR Pvt. Ltd. |
+Designed By
+<a href="https://nfosoft.com" target="_blank">nfoSoft Innovations</a>
+</p>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+window.addEventListener("scroll",()=>{
+
+const cols=document.querySelectorAll(".footer-col");
+
+cols.forEach(col=>{
+
+const pos=col.getBoundingClientRect().top;
+const screen=window.innerHeight;
+
+if(pos<screen-100){
+
+col.classList.add("show");
+
+}
+
+});
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+<div class="floating-contact">
+
+  <!-- PHONE -->
+  <a href="tel:+918309880312" class="float-btn phone">
+    <i class="fa-solid fa-phone"></i>
+    <span class="tooltip">Phone</span>
+  </a>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/918309880312" target="_blank" class="float-btn whatsapp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="tooltip">WhatsApp</span>
+  </a>
+
+  <!-- MAIN BUTTON -->
+  <div class="float-btn main-btn" onclick="toggleContact()">
+    <i id="mainIcon" class="fa-solid fa-message"></i>
+    <span class="tooltip">Message</span>
+  </div>
+
+</div>
+
+
+
+<script>
+  function toggleContact(){
+
+const container = document.querySelector(".floating-contact");
+const icon = document.getElementById("mainIcon");
+const tooltip = document.querySelector(".main-btn .tooltip");
+
+container.classList.toggle("active");
+
+/* CHANGE ICON */
+
+if(container.classList.contains("active")){
+icon.classList.remove("fa-comment");
+icon.classList.add("fa-xmark");
+tooltip.innerText="Hide";
+}else{
+icon.classList.remove("fa-xmark");
+icon.classList.add("fa-comment");
+tooltip.innerText="Message";
+}
+
+}
+</script>
