@@ -96,6 +96,9 @@ transform:translateX(-500%);
 }
 
 }
+
+
+
 /* NAVBAR */
 
 .navbar{
@@ -317,17 +320,15 @@ margin-left:5px;
 
 .nav-links{
 position:fixed;
-top:60px;              /* header height */
+top:60px;
 left:0;
 width:100%;
-height:calc(100vh - 60px);
 background:#fff;
 flex-direction:column;
 display:none;
 margin-left:0;
 list-style:none;
 z-index:999;
-overflow-y:auto;
 }
 
 /* MENU OPEN */
@@ -350,7 +351,6 @@ width:100%;
 }
 
 /* DROPDOWN */
-
 .dropdown{
 position:static;
 width:100%;
@@ -358,10 +358,14 @@ display:none;
 background:#f9f9f9;
 border:none;
 box-shadow:none;
+opacity:1;
+visibility:visible;
 }
 
 .dropdown.show{
 display:block;
+opacity:1;
+visibility:visible;
 }
 
 .dropdown a{
@@ -370,14 +374,16 @@ padding-left:35px;
 
 /* DISABLE DESKTOP HOVER */
 
+
+}
+
+/* DESKTOP HOVER ONLY */
+@media(min-width:769px){
 .services:hover .dropdown{
-opacity:0;
-visibility:hidden;
+opacity:1;
+visibility:visible;
 }
-
 }
-
-
 
 
 
@@ -918,7 +924,7 @@ min-width:220px;
 /* HEADINGS */
 
 .footer-col h3{
-font-size:30px;
+font-size:25px;
 margin-bottom:15px;
 
 opacity:0;
